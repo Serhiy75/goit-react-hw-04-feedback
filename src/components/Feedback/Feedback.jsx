@@ -46,7 +46,7 @@ export class Feedback extends React.Component {
         <FeedbackWrapper>
           <Section title="Statistics" />
           {!total ? (
-            <NotificationMessage message="There is no feedback yet" />
+            <NotificationMessage message="No feedback given" />
           ) : (
             <Statistics
               good={good}
