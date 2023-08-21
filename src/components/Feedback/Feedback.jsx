@@ -18,6 +18,7 @@ export class Feedback extends React.Component {
     }));
   };
 
+
   countTotalFeedback = () => {
     const votes = Object.values(this.state);
     return votes.reduce((acc, vote) => acc + vote, 0);

@@ -10,13 +10,13 @@ export const Statistics = ({
   positivePercentage = 0,
 }) => (
   <StatisticsList>
-    <StatisticsItem>
+    <StatisticsItem key="item1">
       <Stats prop={'good'}></Stats> Good: {good}
     </StatisticsItem>
-    <StatisticsItem>
+    <StatisticsItem key="item2">
       <Stats prop={'neutral'}></Stats>Neutral: {neutral}
     </StatisticsItem>
-    <StatisticsItem>
+    <StatisticsItem key="item3">
       <Stats prop={'bad'}></Stats>Bad: {bad}
     </StatisticsItem>
     <StatisticsItem>&#127775; Total: {total}</StatisticsItem>
