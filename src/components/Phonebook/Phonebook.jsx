@@ -2,6 +2,7 @@ import { FormContacts } from '../FormContacts/FormContacts';
 import {Component} from 'react';
 import { ContactList } from '../ContactList/ContactList';
 import { FilterContact } from '../FIlterContact/FilterContact';
+
 export class Phonebook extends Component {
     state = {
         contacts: [    {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},

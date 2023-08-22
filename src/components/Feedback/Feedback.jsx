@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import { Component } from 'react';
 import { FeedbackForm, FeedbackWrapper } from './Feedback.styled.jsx';
 import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions.jsx';
 import { Statistics } from '../Statistics/Statistics.jsx';
@@ -18,19 +18,16 @@ export class Feedback extends Component {
     }));
   };
 
-
   countTotalFeedback = () => {
-    const votes = Object.values(this.state);
-    return votes.reduce((acc, vote) => acc + vote, 0);
+    return Object.values(this.state).reduce((acc, vote) => acc + vote, 0);
   };
 
   countPositiveFeedbackPercentage = () => {
     if (this.state.good === 0) return 0;
-    return +((this.state.good / this.countTotalFeedback()) * 100).toFixed(1);
+    return ((this.state.good / this.countTotalFeedback()) * 100).toFixed(1);
   };
 
   render() {
-    const options = Object.keys(this.state);
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
     const positiveFeedbackPercent = this.countPositiveFeedbackPercentage();
@@ -40,7 +37,7 @@ export class Feedback extends Component {
         <FeedbackWrapper>
           <Section title="Please leave feedback" />
           <FeedbackOptions
-            options={options}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.handleClick}
           />
         </FeedbackWrapper>
