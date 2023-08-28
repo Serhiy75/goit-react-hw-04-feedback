@@ -9,10 +9,10 @@ import {
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <FeedbackList>
-      {options.map((option, index)=> {
+      {options.map(option => {
         const buttonOption = option.charAt(0).toUpperCase() + option.slice(1);
         return (
-          <FeedbackItem key={index}>
+          <FeedbackItem key={option}>
             <FeedbackButton
               type="button"
               prop={option}
